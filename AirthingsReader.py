@@ -115,7 +115,7 @@ def connectAndRead(SERIAL_NUMBER):
     signal.signal(signal.SIGINT, _signal_handler)
 
 
-    wave2.connect(retries=10)
+    wave2.connect(retries=20)
     current_values = wave2.read()
     wave2.disconnect()
     return current_values

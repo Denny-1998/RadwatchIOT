@@ -25,7 +25,7 @@ class StatusLed:
 
     def setState(self, radonLevel, thresholdValue1, thresholdValue2):
         if (radonLevel > thresholdValue2):
-            self.red()
+            self.StateRed()
         elif (radonLevel > thresholdValue1 & radonLevel <= thresholdValue2):
             self.StateYellow()
         else: 

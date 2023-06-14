@@ -27,20 +27,22 @@ def loggerApp():
             try:
                 loggerDevice.log() 
                 tryAgain = False
-            except:
+            except Exception as e:
                 retryCounter += 1
 
-                #retry as long as stated on top 
+                #retry as long as statxed on top 
                 if retryCounter == retries:
                     tryAgain = True
 
                 print("something went wrong. Trying again in 5 minutes")
+                print(e)
+                
 
                 #wait a bit for the next retry
-                time.sleep(10)
+                time.sleep(300)
         #wait half an hour for the next log entry
         
-        time.sleep(50)
+        time.sleep(1800)
 
 
 def blinkStatusLed():

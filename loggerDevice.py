@@ -52,7 +52,7 @@ class LoggerDevice ():
             'password': password,
             'serial_number': serial_number
         }
-
+        print(config_values)
         print("-----------------------\n")
         return config_values
 
